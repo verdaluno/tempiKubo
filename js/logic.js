@@ -3,19 +3,12 @@ var segundos = 0;
 var minutos = 0;
 var horas = 0;
 
-
-document.getElementById("inicio").addEventListener('keypress', function (e) {
-    e.preventDefault();
-    if(e.keyCode == 32 || e.code == "Space") {
-      console.log('Han pulsado la tecla de espacio');
-    }
-    function inicio () {
-        control = setInterval(cronometro,10);
-        document.getElementById("inicio").disabled = true;
-        document.getElementById("parar").disabled = false;
-        document.getElementById("reinicio").disabled = false;
-    }
-  });
+function inicio () {
+	control = setInterval(cronometro,10);
+	document.getElementById("inicio").disabled = true;
+	document.getElementById("parar").disabled = false;
+	document.getElementById("reinicio").disabled = false;
+}
 function parar () {
 	clearInterval(control);
 	document.getElementById("parar").disabled = true;
